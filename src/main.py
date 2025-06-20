@@ -1,18 +1,3 @@
-
-import argparse
-
-def parse_args():
-    parser = argparse.ArgumentParser(description='Fingerprint Recognition Training')
-    parser.add_argument('--result_dir', type=str, required=True, help='Directory to save results')
-    parser.add_argument('--verify_path', type=str, required=True, help='Path to verify dataset .pt file')
-    parser.add_argument('--enroll_path', type=str, required=True, help='Path to enroll dataset .pt file')
-    parser.add_argument('--epochs', type=int, default=20, help='Number of training epochs')
-    parser.add_argument('--batch_size', type=int, default=64, help='Batch size for training')
-    parser.add_argument('--learning_rate', type=float, default=1e-4, help='Learning rate')
-    parser.add_argument('--use_ddp', type=bool, default=False, help='Enable DistributedDataParallel')
-    return parser.parse_args()
-
-
 import os
 import argparse
 import logging
@@ -43,11 +28,14 @@ def parse_args():
     parser.add_argument('--result_dir', type=str, default='/data/nas05/paul/fingerprint_project/src/result/ablation/wo_stn')
     parser.add_argument('--verify_path', type=str, default='/data/nas05/paul/preprocessing/innolux/Innolux_verify_fe.pt')
     parser.add_argument('--enroll_path', type=str, default='/data/nas05/paul/preprocessing/innolux/Innolux_enroll_fe.pt')
-    parser.add_argument('--batch_size', type=int, default=300)
+    parser.add_argument('--batch_size', type=int, default=256)
     parser.add_argument('--epochs', type=int, default=20)
     parser.add_argument('--use_fe', action='store_true', help='Use feature-extracted inputs')
+    parser.add_argument('--use_ddp', type=bool, default=False, help='Enable DistributedDataParallel')
     parser.add_argument('--dist_url', type=str, default='tcp://localhost:58889')
+    
     return parser.parse_args()
+
 
 def setup_directories(result_dir):
     checkpoint_dir = os.path.join(result_dir, 'ckpts_0')
