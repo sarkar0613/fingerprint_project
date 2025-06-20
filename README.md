@@ -1,3 +1,4 @@
+
 # Fingerprint Recognition using Unsupervised Pre-training and Siamese Network Finetuning
 
 This repository contains the implementation of my Master's thesis:
@@ -26,7 +27,7 @@ This project uses two fingerprint datasets at different stages of training:
 -Description: A synthetic fingerprint dataset generated using Generative Adversarial Networks (GANs) developed by Michigan State University's PRIP Lab.
 -Purpose: Used for self-supervised pretraining via Barlow Twins to address the scarcity of labeled data.
 
-https://biometrics.cse.msu.edu/Publications/Databases/MSU_PrintsGAN/
+  https://biometrics.cse.msu.edu/Publications/Databases/MSU_PrintsGAN/
 
 2. Innolux Dataset 群創光電指紋資料庫 (Fine-tuning and Evaluation) 
 -Description: A proprietary fingerprint dataset collected using an optical, glass-based mobile fingerprint sensor under real-world conditions.
