@@ -6,7 +6,7 @@ This repository contains the implementation of my Master's thesis:
 ![image](https://github.com/user-attachments/assets/5ab58b22-2585-40ee-9942-ba46ac673eb1)
 
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -18,70 +18,30 @@ src/
 └── utils/                 # Utility and visualization tools
 ```
 
-## 📂 Datasets
+## Datasets
+
 This project uses two fingerprint datasets at different stages of training:
 
 1. PrintsGAN (Pretraining)
-Description: A synthetic fingerprint dataset generated using Generative Adversarial Networks (GANs) developed by Michigan State University's PRIP Lab.
-Purpose: Used for self-supervised pretraining via Barlow Twins to address the scarcity of labeled data.
+-Description: A synthetic fingerprint dataset generated using Generative Adversarial Networks (GANs) developed by Michigan State University's PRIP Lab.
+-Purpose: Used for self-supervised pretraining via Barlow Twins to address the scarcity of labeled data.
 
-Size:
+https://biometrics.cse.msu.edu/Publications/Databases/MSU_PrintsGAN/
 
-35,000 unique identities
-
-15 fingerprint images per identity
-
-Total: 525,000 grayscale .tif images (256×256 resolution)
-
-Naming Convention: FingerID_SampleID (e.g., 1_1.tif, 100_15.tif)
-
-Features:
-
-Simulates variations in lighting, deformation, and occlusion
-
-Enables pretraining with large-scale, diverse data
-
-🔬 2. Innolux Dataset (Fine-tuning and Evaluation)
-Description: A proprietary fingerprint dataset collected using an optical, glass-based mobile fingerprint sensor under real-world conditions.
-
-Purpose: Used to fine-tune the Siamese network and evaluate its performance under sensor variation and environmental challenges.
-
-Structure:
-
-30 subjects × 6 fingerprint classes = 180 unique fingerprints
-
-Each fingerprint has:
-
-20 enrollment images
-
-50 verification images
-
-Conditions Simulated:
-
-ST – standard fluorescent lighting
-
-100 – dry environment
-
-90 – low-temperature environment (−5°C)
-
-Challenges Addressed:
-
-Partial prints
-
-Incomplete ridge structures
-
-Noise and environmental artifacts
+2. Innolux Dataset 群創光電指紋資料庫 (Fine-tuning and Evaluation) 
+-Description: A proprietary fingerprint dataset collected using an optical, glass-based mobile fingerprint sensor under real-world conditions.
+-Purpose: Used to fine-tune the Siamese network and evaluate its performance under sensor variation and environmental challenges.
 
 Note: The Innolux dataset is proprietary and not publicly available. Please contact the authors for access if needed.
 
-## 🚀 Features
+## Features
 
 - Self-supervised pre-training (Barlow Twins architecture)
 - Siamese network for fingerprint verification
 - Contrastive loss for fine-tuning
 - Dataset preprocessing and dynamic pair generation
 
-## 📦 Installation
+## Installation
 
 ```bash
 # Clone the repo
@@ -96,7 +56,7 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 🏃‍♂️ Training
+## Training
 
 Prepare your `enroll` and `verify` dataset `.pt` files, then run:
 
@@ -106,10 +66,10 @@ bash train_single.sh
 bash train_ddp.sh
 ```
 
-## 📊 Results
+## Results
 
 Results (e.g., accuracy, ROC curve) will be saved to the directory specified in `--result_dir`.
 
-## 📚 License
+## License
 
 This project is for academic use only. For commercial use, please contact the author.
