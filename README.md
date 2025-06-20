@@ -3,6 +3,8 @@
 This repository contains the implementation of my Master's thesis:
 **"Research on Fingerprint Recognition Method Based on Unsupervised Pre-training and Siamese Network Architecture"**.
 
+![image](https://github.com/user-attachments/assets/9dc32f0c-9160-45b3-b408-a10816e8d7f2)
+
 ## 📁 Project Structure
 
 ```
