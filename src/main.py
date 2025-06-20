@@ -25,13 +25,13 @@ def setup_logging(log_file):
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Distributed Fingerprint Finetune')
-    parser.add_argument('--result_dir', type=str, default='/data/nas05/paul/fingerprint_project/src/result/ablation/wo_stn')
+    parser.add_argument('--result_dir', type=str, default='/data/nas05/paul/fingerprint_project/src/result/ablation/stn')
     parser.add_argument('--verify_path', type=str, default='/data/nas05/paul/preprocessing/innolux/Innolux_verify_fe.pt')
     parser.add_argument('--enroll_path', type=str, default='/data/nas05/paul/preprocessing/innolux/Innolux_enroll_fe.pt')
     parser.add_argument('--batch_size', type=int, default=256)
     parser.add_argument('--epochs', type=int, default=20)
-    parser.add_argument('--use_fe', action='store_true', help='Use feature-extracted inputs')
-    parser.add_argument('--use_ddp', type=bool, default=False, help='Enable DistributedDataParallel')
+    parser.add_argument('--use_stn', default=True, help='Use stn inputs')
+    parser.add_argument('--use_ddp', type=bool, default=True, help='Enable DistributedDataParallel')
     parser.add_argument('--dist_url', type=str, default='tcp://localhost:58889')
     
     return parser.parse_args()
