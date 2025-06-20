@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# 限制只使用 GPU 0 和 1
+#export CUDA_VISIBLE_DEVICES=0,1
+# 設定使用的 GPU 數量（這裡就是 2）
+#NUM_GPUS=2
+
 NUM_GPUS=$(nvidia-smi -L | wc -l)
 
 python -m torch.distributed.launch \
