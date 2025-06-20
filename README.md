@@ -1,4 +1,4 @@
-# Fingerprint Recognition using Unsupervised Pre-training and Siamese Network
+# Fingerprint Recognition using Unsupervised Pre-training and Siamese Network Finetuning
 
 This repository contains the implementation of my Master's thesis:
 **"Research on Fingerprint Recognition Method Based on Unsupervised Pre-training and Siamese Network Architecture"**.
