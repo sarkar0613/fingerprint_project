@@ -47,10 +47,10 @@ Note: The Innolux dataset is proprietary and not publicly available. Please cont
 -Finetuned stage :
 ```bash
 # Clone the repo
-git clone [https://github.com/your-username/fingerprint_project.git](https://github.com/sarkar0613/fingerprint_project.git)
+git clone https://github.com/sarkar0613/fingerprint_project.git
 cd fingerprint_project/src
 
-# Create and activate virtual environment (optional but recommended)
+# Create and activate virtual environment 
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
