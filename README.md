@@ -42,6 +42,9 @@ Note: The Innolux dataset is proprietary and not publicly available. Please cont
 
 ## Installation
 
+-About pre-trained stage, please refe https://github.com/facebookresearch/barlowtwins .
+
+-Finetuned stage :
 ```bash
 # Clone the repo
 git clone https://github.com/your-username/fingerprint_project.git
