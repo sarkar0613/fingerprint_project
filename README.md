@@ -65,10 +65,6 @@ bash train_single.sh
 bash train_ddp.sh
 ```
 
-## Results
-
-Results (e.g., accuracy, ROC curve) will be saved to the directory specified in `--result_dir`.
-
 ## License
 
 This project is for academic use only. For commercial use, please contact the author.
